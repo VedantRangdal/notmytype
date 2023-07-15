@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    #video-container {
+      position: relative;
+      width: 80%;
+      max-width: 400px;
+      margin-bottom: 20px;
+    }
+
+    #video-container video {
+      width: 100%;
+      height: auto;
+    }
+
+    #text-container {
+      margin-bottom: 20px;
+    }
+
+    #next-button {
+      padding: 10px 20px;
+      border: none;
+      background-color: white;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="video-container">
+    <video id="cat-video" controls muted>
+      <source src="sleepy_cat_video.mp4" type="video/mp4">
+      <!-- If the video doesn't load, you can provide a fallback image here -->
+      <img src="fallback_image.jpg" alt="Sleepy cat">
+    </video>
+  </div>
+
+  <div id="text-container">
+    <p>Good Night <span>&#x1F634;</span></p>
+  </div>
+
+  <button id="next-button">Next</button>
+
+  <script>
+    var nextButton = document.getElementById("next-button");
+    nextButton.addEventListener("click", function() {
+      // Redirect to the second page
+      window.location.href = "second_page.html";
+    });
+  </script>
+</body>
+</html>
